@@ -1,0 +1,23 @@
+.NavBar{
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: auto;
+    background-color: #22498D;
+    width: 100%;
+    padding: 1%;
+    border: 0;
+    margin: 0;
+    align-items: center;
+}
+
+.nav{
+   
+    
+}
+
+.pesquisar{
+    display: flex;
+    background-color: #FFFFFF;
+    width: 763px;
+    height: 46px;
+}

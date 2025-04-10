@@ -1,26 +1,46 @@
-import React from 'react'
-import styles from './Nav.module.css'
-import img from './imgs/LogoSenai.svg'
-import nav from './imgs/nav.svg'
-import user from './imgs/user.svg'
-import heart from './imgs/heart.svg'
+import Container from 'react-bootstrap/Container';
+import Nav from 'react-bootstrap/Nav';
+import Navbar from 'react-bootstrap/Navbar';
+import NavDropdown from 'react-bootstrap/NavDropdown';
 
-const NavBar = () => {
+function BasicExample() {
     return (
-        <nav className={styles.NavBar}>
-            <img src={img} />
-            <img src={nav} className='nav'/>
-            <label>
-                <input
-                type="text"
-                placeholder='Procure pelo nome do curso'
-                className={styles.pesquisar}/>
-            </label>
-            <img src={user}/>
-            <p>Olá, faça login ou cadastre-se</p>
-            <img src={heart}/>
-        </nav>
-    )
+        <Navbar expand="lg" className="bg-body-primary" fixed='top' style={{ backgroundColor: '#22498D' }}>
+            <Container>
+                <Navbar.Brand href="#home"><img src="./LogoSenai.svg" alt="LogoSenai" /></Navbar.Brand>
+                <Navbar.Toggle aria-controls="basic-navbar-nav" />
+                <Navbar.Collapse id="basic-navbar-nav">
+                    <Nav className="me-auto">
+                        <Nav.Link href="#home">
+
+                            <div className="form-floating mb-3" style={{ width: '400px' }}>
+                                <input type="text"
+                                    className="form-control"
+                                    id="floatingInput"
+                                    placeholder="Elétrica"
+                                />
+                                <label htmlFor="floatingInput">Pesquise o nome do curso
+                                <img src="lupa.svg" alt="" />
+                                </label>
+                            </div>
+
+                        </Nav.Link>
+                        <NavDropdown title="Dropdown" id="basic-nav-dropdown">
+                            <NavDropdown.Item href="#action/3.1">Colocar um link para a história do senai</NavDropdown.Item>
+                            <NavDropdown.Item href="#action/3.2">
+                                tela de login
+                            </NavDropdown.Item>
+                            <NavDropdown.Item href="#action/3.3">nem sei</NavDropdown.Item>
+                            <NavDropdown.Divider />
+                            <NavDropdown.Item href="#action/3.4">
+                                nem sei 2
+                            </NavDropdown.Item>
+                        </NavDropdown>
+                    </Nav>
+                </Navbar.Collapse>
+            </Container>
+        </Navbar>
+    );
 }
 
-export default NavBar
+export default BasicExample;

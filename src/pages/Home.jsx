@@ -7,6 +7,7 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import CardText from 'react-bootstrap/esm/CardText';
+import Footer from '../components/Footer';
 
 function ControlledCarousel() {
   const [index, setIndex] = useState(0);
@@ -102,11 +103,12 @@ function ControlledCarousel() {
       </div>
 
       {/* --------------------------------------------------cards-------------------------------------------------- */}
-      <Container style={{ marginTop: '30px', marginBottom: '60px'}}>
+      <Container style={{ marginTop: '30px', marginBottom: '60px' }}>
         <Row className="justify-content-center">
           <Col xs={12} sm={6} md={4} lg={3} className="d-flex justify-content-center mb-4">
             <Card style={{ width: '18rem' }}>
-              <Card.Img variant="top" src="/hidraulica_4 1.svg" style={{ width: '120%', alignItems: 'center' }} />
+              <Card.Img variant="top" src="/hidraulica_4 1.svg" style={{ display: "inline-block", alignItems: "center", border: "20px" }} />
+              {/* width: '120%', */}
               <Card.Body>
                 <Card.Title>Hidráulica</Card.Title>
                 <Card.Text style={{ height: '13', justifyContent: 'flex-start', fontWeight: '', fontStyle: 'normal', textAlign: "initial" }}>
@@ -132,7 +134,7 @@ function ControlledCarousel() {
           {/* --------------------------------------------------cards-------------------------------------------------- */}
           <Col xs={12} sm={6} md={4} lg={3} className="d-flex justify-content-center mb-4">
             <Card style={{ width: '18rem' }}>
-              <Card.Img variant="top" src="/pintura_industrial_1_18 1.svg" style={{ width: '120%', alignItems: 'center' }} />
+              <Card.Img variant="top" src="/pintura_industrial_1_18 1.svg" style={{ display: "inline-block", alignItems: "center", border: "20px" }} />
               <Card.Body>
                 <Card.Title>Pintura industrial</Card.Title>
                 <Card.Text style={{ height: '13', justifyContent: 'flex-start', fontWeight: '', fontStyle: 'normal', textAlign: "initial" }}>
@@ -159,7 +161,7 @@ function ControlledCarousel() {
           {/* --------------------------------------------------cards-------------------------------------------------- */}
           <Col xs={12} sm={6} md={4} lg={3} className="d-flex justify-content-center mb-4">
             <Card style={{ width: '18rem' }}>
-              <Card.Img variant="top" src="/fundamentos_e_tecno_da_construcivil 1.svg" style={{ width: '120%', alignItems: 'center' }} />
+              <Card.Img variant="top" src="/fundamentos_e_tecno_da_construcivil 1.svg" style={{ display: "inline-block", alignItems: "center", border: "20px" }} />
               <Card.Body>
                 <Card.Title>Fundamentos e tecnologias da construção civil</Card.Title>
                 <Card.Text style={{ height: '13', justifyContent: 'flex-start', fontWeight: '', fontStyle: 'normal', textAlign: "initial" }}>
@@ -169,7 +171,7 @@ function ControlledCarousel() {
 
                   <p>60 horas</p>
 
-                  <CardText style={{ color: 'blue', textJustify: 'revert-layer'}}>
+                  <CardText style={{ color: 'blue', textJustify: 'revert-layer' }}>
                     <p style={{
                       fontSize: "20px", fontWeight: "bold",
                       textAlign: "end"
@@ -184,6 +186,7 @@ function ControlledCarousel() {
           </Col>
         </Row>
       </Container>
+        <Footer/>
     </Layout>
   );
 }

@@ -14,7 +14,7 @@ function BasicExample() {
             <Container>
                 <Navbar.Brand href="#home"><img src="./LogoSenai.svg" alt="LogoSenai" /></Navbar.Brand>
                 <NavDropdown color='#FFFFFF' title="=" id="basic-nav-dropdown">
-
+                
                     <NavDropdown.Item href="#action/3.1">Colocar um link para a história do senai</NavDropdown.Item>
                     <NavDropdown.Item href="#action/3.2">
                         tela de login

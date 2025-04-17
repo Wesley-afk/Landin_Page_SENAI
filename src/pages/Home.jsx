@@ -23,12 +23,11 @@ function ControlledCarousel() {
           display: 'flex',
           justifyContent: 'center',
           alignItems: 'center',
-          width: '100vw',
-          height: '100vh',
+          width: '100%',
+          height: '94vh',
           margin: '0',
           padding: '0',
           overflow: 'hidden',
-          position: 'relative',
         }}
       >
         <Carousel

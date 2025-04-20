@@ -8,6 +8,7 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import CardText from 'react-bootstrap/esm/CardText';
 import Footer from '../components/Footer';
+import { useNavigate } from 'react-router-dom';
 
 function ControlledCarousel() {
   const [index, setIndex] = useState(0);
@@ -15,6 +16,10 @@ function ControlledCarousel() {
   const handleSelect = (selectedIndex) => {
     setIndex(selectedIndex);
   };
+
+  const navigate = useNavigate();
+
+  // Eu tenho que clicar no matricular-se e ele tem que me levar para a página
 
   return (
     <Layout>
@@ -35,9 +40,8 @@ function ControlledCarousel() {
           onSelect={handleSelect}
           style={{
             width: '100%',
-            height: '100%',
             position: 'absolute',
-            top: 0,
+            top: '12vh',
             left: 0,
           }}
         >
@@ -125,7 +129,7 @@ function ControlledCarousel() {
                     <p style={{ fontSize: '12px', color: "#4E4E4E" }}>Valor total do curso r$ 389,00 em 01x s/Juros R$ 389,00</p>
                   </CardText>
                 </Card.Text>
-                <Button variant="primary" style={{ width: '100%', backgroundColor: '#3840BA' }}>Matricule-se</Button>
+                <Button variant="primary" style={{ width: '100%', backgroundColor: '#3840BA' }} onClick={() => navigate('/HidraulicaBasicaDetalhamento')}>Matricule-se</Button>
               </Card.Body>
             </Card>
           </Col>
@@ -152,7 +156,7 @@ function ControlledCarousel() {
                     <p style={{ fontSize: '12px', color: "#4E4E4E" }}>Valor total do curso r$ 389,00 em 01x s/Juros R$ 389,00</p>
                   </CardText>
                 </Card.Text>
-                <Button variant="primary" style={{ width: '100%', backgroundColor: '#3840BA' }}>Matricule-se</Button>
+                <Button variant="primary" style={{ width: '100%', backgroundColor: '#3840BA' }}onClick={() => navigate('/PinturaIndustrialDetalhamento')}>Matricule-se</Button>
               </Card.Body>
             </Card>
           </Col>
@@ -179,7 +183,7 @@ function ControlledCarousel() {
                   </CardText>
 
                 </Card.Text>
-                <Button variant="primary" style={{ width: '100%', backgroundColor: '#3840BA' }}>Matricule-se</Button>
+                <Button variant="primary" style={{ width: '100%', backgroundColor: '#3840BA'}} onClick={() => navigate('/ConstrucaCivilDetalhamento')}>Matricule-se</Button>
               </Card.Body>
             </Card>
           </Col>

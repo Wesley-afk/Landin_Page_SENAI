@@ -1,25 +1,25 @@
-import { createBrowserRouter } from "react-router-dom";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Home from './src/pages/Home';
-import CCD from './src/pages/ConstrucaCivilDetalhamento'
-import HBD from './src/pages/HidraulicaBasicaDetalhamento'
-import PID from './src/pages/PinturaIndustrialDetalhamento'
+import ConstrucaCivilDetalhamento from './src/pages/ConstrucaCivilDetalhamento'
+import HidraulicaBasicaDetalhamento from './src/pages/HidraulicaBasicaDetalhamento'
+import PinturaIndustrialDetalhamento from './src/pages/PinturaIndustrialDetalhamento'
 
-const router = createBrowserRouter([
+export const router = createBrowserRouter([
     {
         path: "/",
         element: <Home/>,
         children:[
             {
-                path: 'Construção civil',
-                element: <CCD/>
+                path: 'Construcao-civil',
+                element: <ConstrucaCivilDetalhamento/>
             },
             {
-                path: 'Hidráulica básica',
-                element: <HBD/>
+                path: 'Hidraulica-basica',
+                element: <HidraulicaBasicaDetalhamento/>
             },
             {
-                path: 'Pintura industral',
-                element: <PID/>
+                path: 'Pintura-industral',
+                element: <PinturaIndustrialDetalhamento/>
             }
         ]
     }

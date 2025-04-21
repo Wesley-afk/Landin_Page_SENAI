@@ -16,3 +16,10 @@
     margin-left: clamp(1%, 9vw, 80%);
     padding-top: 3%;
 }
+
+.hidraulica2 h4{
+    font-weight:normal;
+    margin-top: 5%;
+    margin-left: 9%;
+    font-size:larger;
+}

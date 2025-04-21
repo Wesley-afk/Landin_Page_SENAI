@@ -12,7 +12,7 @@ const HidraulicaBasicaDetalhamento = () => {
         <h2>Hidráulica básica</h2>
       </div>
 
-      <div>
+      <div className={styles.hidraulica2}>
           <h4>Objetivo</h4>
       </div>
     </div>

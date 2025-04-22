@@ -45,12 +45,11 @@ const HidraulicaBasicaDetalhamento = () => {
           <Card style={{ width: '18rem' }} className={styles.cardH}>
             <Card.Img variant="top" src="/hidraulica_4 1.svg" />
             <Card.Body>
-              <Card.Title>Card Title</Card.Title>
+              <Card.Title>Hidráulica básica</Card.Title>
               <Card.Text>
-                Some quick example text to build on the card title and make up the
-                bulk of the card's content.
+                pegar as informações do protótipopegar as informações do protótipopegar as informações do protótipo
               </Card.Text>
-              <Button variant="primary">Go somewhere</Button>
+              <Button variant="primary">Matricular-se</Button>
             </Card.Body>
           </Card>
         </div>

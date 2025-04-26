@@ -1,0 +1,18 @@
+.email{
+    padding: 4%;
+}
+
+.LayOutLogin{
+    position: absolute;
+    margin-top: 28%;
+    right: 5%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.LayOutLogin p{
+    color: white;
+}
+
+.label{
+    color: white;
+}

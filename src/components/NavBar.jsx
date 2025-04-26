@@ -5,11 +5,14 @@ import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import FloatingLabel from 'react-bootstrap/FloatingLabel';
 import Form from 'react-bootstrap/Form';
+import Login from './Login/Login';
+import styles from './Login/styles/login.module.css';
 
 function BasicExample() {
     const [mostrarLogin, setMostrarLogin] = useState(false);
-
+    
     return (
+    <>
         <Navbar expand="lg" className="bg-body-primary" fixed='top' style={{ backgroundColor: '#22498D', display: 'flex', alignItems: 'center' }}>
             <Container>
                 <Navbar.Brand href="#home"><img src="./LogoSenai.svg" alt="LogoSenai" /></Navbar.Brand>
@@ -41,58 +44,19 @@ function BasicExample() {
                                 </label>
                             </div>
                         </Nav.Link>
-                        <span style={{
-                            color: 'white',
-                            padding: '4px 0',
-                            fontSize: '1rem',
-                            display: 'flex',
-                            alignItems: 'center',
-                            paddingBottom: '15px',
-                            paddingLeft: '50px'
+                        <img src="/user.svg" alt="Icone do usuário" onClick={() => setMostrarLogin(!mostrarLogin)}/>
+                        <p style={{
+                            color:'white',
+                            marginTop:'2%'
                         }}>
-                            <img src="/user.svg" alt="Icone do usuário" onClick={() => setMostrarLogin(!mostrarLogin)} />
-                            Olá, faça login ou cadastre-se
-                        </span>
-                        {mostrarLogin && (
-                            <div>
-                                <FloatingLabel
-                                    controlId="floatingInput"
-                                    label="Digite seu e-mail"
-                                    className="mb-3"
-                                    style={{
-                                        position: "absolute",
-                                        padding: '3px',
-                                        borderRadius: "5%",
-                                        alignItems: "center",
-                                        backgroundColor: "#FFFFFF",
-                                        right: "5%",
-                                        top: "120%",
-
-                                    }}
-                                >
-                                    <Form.Control type="email" placeholder="name@example.com" />
-                                </FloatingLabel>
-                                <FloatingLabel
-                                    controlId="floatingPassword"
-                                    label="Digite a senha"
-                                    style={{
-                                        position: "absolute",
-                                        padding: '3px',
-                                        borderRadius: "5%",
-                                        alignItems: "center",
-                                        backgroundColor: "#FFFFFF",
-                                        right: "5%",
-                                        top: "185%",
-
-                                    }}>
-                                    <Form.Control type="password" placeholder="Password" />
-                                </FloatingLabel>
-                            </div>
-                        )}
+                        Olá, faça login ou cadastre-se
+                        </p>
                     </Nav>
+                    {mostrarLogin && <div className={styles.LayOutLogin}><Login/></div>}
                 </Navbar.Collapse>
             </Container>
         </Navbar >
+     </>
     );
 }
 

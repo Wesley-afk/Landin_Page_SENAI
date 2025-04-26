@@ -6,7 +6,6 @@ import { useState } from 'react';
 
 function Login() {
   const [mostrarCadastro, setMostrarCadastro] = useState(false);
-  const [mostrarLogin, setMostrarLogin] = useState(true);
 
   return (
   <>
@@ -32,8 +31,8 @@ function Login() {
       <Button style={{ backgroundColor: '#02D80C', borderColor: '#02D80C'}}
               onMouseEnter={e => e.target.style.backgroundColor = '#019A09'}
               onMouseLeave={e => e.target.style.backgroundColor = '#02D80C'}
-              onClick={() =>{setMostrarCadastro(!mostrarCadastro);
-                             setMostrarLogin(!mostrarLogin);}}>
+              onSubmit={() =>{setMostrarCadastro(!mostrarCadastro);
+                            }}>
         Cadastrar
       </Button>
     </div>

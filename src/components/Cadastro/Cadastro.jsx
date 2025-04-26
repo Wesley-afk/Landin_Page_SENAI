@@ -1,10 +1,7 @@
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
-import Login from '../Login/Login';
-import { useState } from 'react';
 
 function Cadastro() {
-    const [mostrarLogin, setMostrarLogin] = useState(false);
     
   return (
     <Form>

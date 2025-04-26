@@ -31,12 +31,12 @@ function Login() {
       <Button style={{ backgroundColor: '#02D80C', borderColor: '#02D80C'}}
               onMouseEnter={e => e.target.style.backgroundColor = '#019A09'}
               onMouseLeave={e => e.target.style.backgroundColor = '#02D80C'}
-              onSubmit={() =>{setMostrarCadastro(!mostrarCadastro);
+              onClick={() =>{setMostrarCadastro(!mostrarCadastro);
                             }}>
         Cadastrar
       </Button>
     </div>
-    {mostrarLogin && !mostrarCadastro && <Login />}
+    {mostrarCadastro && <> <Cadastro/> </>}
     </Form>
   </>
   );

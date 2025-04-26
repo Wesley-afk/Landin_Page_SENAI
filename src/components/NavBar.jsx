@@ -10,7 +10,7 @@ import styles from './Login/styles/login.module.css';
 
 function BasicExample() {
     const [mostrarLogin, setMostrarLogin] = useState(false);
-    
+
     return (
     <>
         <Navbar expand="lg" className="bg-body-primary" fixed='top' style={{ backgroundColor: '#22498D', display: 'flex', alignItems: 'center' }}>

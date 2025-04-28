@@ -100,7 +100,7 @@ function ControlledCarousel() {
       >
         <img src="/barra.svg" alt="barra" />
         <div>
-          <p style={{ margin: 0, fontWeight: 'bold' }}>Cursos em alta</p>
+          <div style={{ margin: 0, fontWeight: 'bold' }}>Cursos em alta</div>
           <h6 style={{ margin: 0 }}>ESCOLHA O CURSO</h6>
         </div>
       </div>
@@ -115,18 +115,24 @@ function ControlledCarousel() {
               <Card.Body>
                 <Card.Title>Hidráulica</Card.Title>
                 <Card.Text style={{ height: '13', justifyContent: 'flex-start', fontWeight: '', fontStyle: 'normal', textAlign: "initial" }}>
-                  <p>Aracruz</p>
+                  {/* <p>Aracruz</p>
                   <p>Presencial</p>
                   <p>40 horas</p>
-                  <p>  Início em 14/04/2025 </p>
+                  <p>Início em 14/04/2025</p> */}
+
+                  <div>Aracruz</div>
+                  <div>Presencial</div>
+                  <div>40 horas</div>
+                  <div>Início em 14/04/2025</div>
+
                   <CardText style={{ color: 'blue', textJustify: 'revert-layer' }}>
-                    <p style={{
+                    <div style={{
                       fontSize: "20px", fontWeight: "bold",
                       textAlign: "end"
                     }}>Em até 1x de R$389,90
-                    </p>
+                    </div>
 
-                    <p style={{ fontSize: '12px', color: "#4E4E4E" }}>Valor total do curso r$ 389,00 em 01x s/Juros R$ 389,00</p>
+                    <div style={{ fontSize: '12px', color: "#4E4E4E" }}>Valor total do curso r$ 389,00 em 01x s/Juros R$ 389,00</div>
                   </CardText>
                 </Card.Text>
                 <Button variant="primary" style={{ width: '100%', backgroundColor: '#3840BA' }} onClick={() => navigate('/HidraulicaBasicaDetalhamento')}>Matricule-se</Button>
@@ -141,22 +147,27 @@ function ControlledCarousel() {
               <Card.Body>
                 <Card.Title>Pintura industrial</Card.Title>
                 <Card.Text style={{ height: '13', justifyContent: 'flex-start', fontWeight: '', fontStyle: 'normal', textAlign: "initial" }}>
-                  <p>São Mateus</p>
+                  {/* <p>São Mateus</p>
                   <p>Presencial</p>
                   <p>60 horas</p>
-                  <p>Início em 05/05/2025</p>
+                  <p>Início em 05/05/2025</p> */}
+
+                  <div>São Mateus</div>
+                  <div>Presencial</div>
+                  <div>60 horas</div>
+                  <div>Início em 05/05/2025</div>
 
                   <CardText style={{ color: 'blue', textJustify: 'revert-layer' }}>
-                    <p style={{
+                    <div style={{
                       fontSize: "20px", fontWeight: "bold",
                       textAlign: "end"
                     }}>Em até 1x de R$809,90
-                    </p>
+                    </div>
 
-                    <p style={{ fontSize: '12px', color: "#4E4E4E" }}>Valor total do curso r$ 389,00 em 01x s/Juros R$ 389,00</p>
+                    <div style={{ fontSize: '12px', color: "#4E4E4E" }}>Valor total do curso r$ 389,00 em 01x s/Juros R$ 389,00</div>
                   </CardText>
                 </Card.Text>
-                <Button variant="primary" style={{ width: '100%', backgroundColor: '#3840BA' }}onClick={() => navigate('/PinturaIndustrialDetalhamento')}>Matricule-se</Button>
+                <Button variant="primary" style={{ width: '100%', backgroundColor: '#3840BA' }} onClick={() => navigate('/PinturaIndustrialDetalhamento')}>Matricule-se</Button>
               </Card.Body>
             </Card>
           </Col>
@@ -168,28 +179,30 @@ function ControlledCarousel() {
               <Card.Body>
                 <Card.Title>Fundamentos e tecnologias da construção civil</Card.Title>
                 <Card.Text style={{ height: '13', justifyContent: 'flex-start', fontWeight: '', fontStyle: 'normal', textAlign: "initial" }}>
-                  <p>Vila Velha </p>
-
+                  {/* <p>Vila Velha</p>
                   <p>Presencial</p>
+                  <p>60 horas</p> */}
 
-                  <p>60 horas</p>
+                  <div>Vila Velha</div>
+                  <div>Presencial</div>
+                  <div>60 horas</div>
 
                   <CardText style={{ color: 'blue', textJustify: 'revert-layer' }}>
-                    <p style={{
+                    <div style={{
                       fontSize: "20px", fontWeight: "bold",
                       textAlign: "end"
-                    }}>Em até 1x de R$428,73</p>
-                    <p style={{ fontSize: '12px', color: "#4E4E4E" }}>Valor total do curso r$ 428,73 em 01x s/Juros R$  428,73</p>
+                    }}>Em até 1x de R$428,73</div>
+                    <div style={{ fontSize: '12px', color: "#4E4E4E" }}>Valor total do curso r$ 428,73 em 01x s/Juros R$  428,73</div>
                   </CardText>
 
                 </Card.Text>
-                <Button variant="primary" style={{ width: '100%', backgroundColor: '#3840BA'}} onClick={() => navigate('/ConstrucaCivilDetalhamento')}>Matricule-se</Button>
+                <Button variant="primary" style={{ width: '100%', backgroundColor: '#3840BA' }} onClick={() => navigate('/ConstrucaCivilDetalhamento')}>Matricule-se</Button>
               </Card.Body>
             </Card>
           </Col>
         </Row>
       </Container>
-        <Footer/>
+      <Footer />
     </Layout>
   );
 }

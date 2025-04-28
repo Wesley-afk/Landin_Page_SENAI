@@ -1,7 +1,7 @@
 import React from 'react'
 import Footer from '../components/Footer';
 import Layout from '../components/Layout';
-import styles from '../components/src/styles/hidraulica.module.css'
+import styles from './style/hidraulica.module.css'
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 
@@ -22,10 +22,11 @@ const HidraulicaBasicaDetalhamento = () => {
       </div>
 
       <div className={styles.hidraulica2}>
-        <section>
+        <section className={styles.p1}>
           <h4>Objetivo</h4>
           <p>Iniciar o aluno nos conceitos e princípios básicos da hidráulica industrial, considerando normas e requisitos técnicos de qualidade, saúde e segurança do trabalho e de meio ambiente.</p>
         </section>
+
         <section className={styles.detalhes}>
           <h3>Pré-requisitos</h3>
           <p>Ter idade mínima de 16 anos</p>
@@ -37,13 +38,14 @@ const HidraulicaBasicaDetalhamento = () => {
           <p>Comprovante de escolaridade ou autodeclaração de compatibilidade;</p>
           <p>Cópia do CPF.</p>
         </section>
-        <section>
+
+        <section className={styles.endDet}>
           <h4>Conteúdo</h4>
           <p>Hidráulica industrial</p>
         </section>
-        <div>
+        <div className={styles.card}> 
           <Card style={{ width: '18rem' }} className={styles.cardH}>
-            <Card.Img variant="top" src="/hidraulica_4 1.svg" />
+            <Card.Img variant="top" src="/hidraulica_4 1.svg"/>
             <Card.Body>
               <Card.Title>Hidráulica básica</Card.Title>
               <Card.Text>

@@ -13,7 +13,7 @@ function BasicExample() {
 
     return (
     <>
-        <Navbar expand="lg" className="bg-body-primary" fixed='top' style={{ backgroundColor: '#22498D', display: 'flex', alignItems: 'center' }}>
+        <Navbar expand="lg" className="bg-body-primary"fixed='top' style={{ backgroundColor: '#22498D', display: 'flex', alignItems: 'center' }}>
             <Container>
                 <Navbar.Brand href="#home"><img src="./LogoSenai.svg" alt="LogoSenai" /></Navbar.Brand>
                 <NavDropdown color='#FFFFFF' title="=" id="basic-nav-dropdown">

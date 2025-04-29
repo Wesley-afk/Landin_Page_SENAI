@@ -95,7 +95,6 @@
 }
 
 .endDet p{
-    margin:0%;
-    margin-left: ;
-    margin-bottom: 0.4%;
+    position: relative;
+    left: 15%;
 }

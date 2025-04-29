@@ -59,12 +59,15 @@ const ConstrucaCivilDetalhamento = () => {
           <Card className={styles.cardH}>
             <Card.Img variant="top" src="/fundamentos_e_tecno_da_construcivil 1.svg" />
             <Card.Body>
-              <Card.Title>Hidráulica básica</Card.Title>
               <Card.Text>
                 <div>Vila Velha</div>
+                <br />
                 <div>Presencial</div>
+                <br />
                 <div>60 horas</div>
+                <br />
                 <div>Escolha sua turma</div>
+                <br />
 
                 <Card.Text className={styles.bodyCard}>
                   <div>

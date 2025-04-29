@@ -48,12 +48,15 @@ const HidraulicaBasicaDetalhamento = () => {
           <Card className={styles.cardH}>
             <Card.Img variant="top" src="/hidraulica_4 1.svg" />
             <Card.Body>
-              <Card.Title>Hidráulica básica</Card.Title>
               <Card.Text>
                 <div>Aracruz</div>
+                <br />
                 <div>Presencial</div>
+                <br />
                 <div>40 horas</div>
+                <br />
                 <div>Início em 14/04/2025</div>
+                <br />
 
                 <Card.Text className={styles.bodyCard}>
                   <div>

@@ -67,3 +67,25 @@
     box-shadow: 0px 4px 10px rgb(48, 48, 48);
     /* transform: translate(100%, -100%); */
 }
+
+.cardH{
+    width: 18rem;
+}
+
+.bodyCard{
+    font-size: 20px;
+    font-weight: bold;
+    text-align: end;
+    color: blue;
+}
+
+.endCard{
+    font-size: 12px;
+    color: #4E4E4E;
+    text-align: left;
+    width: 17rem;
+}
+
+.buton{
+    width: 100%;
+}

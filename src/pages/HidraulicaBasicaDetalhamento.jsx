@@ -43,15 +43,28 @@ const HidraulicaBasicaDetalhamento = () => {
           <h4>Conteúdo</h4>
           <p>Hidráulica industrial</p>
         </section>
-        <div className={styles.card}> 
-          <Card style={{ width: '18rem' }} className={styles.cardH}>
-            <Card.Img variant="top" src="/hidraulica_4 1.svg"/>
+
+        <div className={styles.card}>
+          <Card className={styles.cardH}>
+            <Card.Img variant="top" src="/hidraulica_4 1.svg" />
             <Card.Body>
               <Card.Title>Hidráulica básica</Card.Title>
               <Card.Text>
-                pegar as informações do protótipopegar as informações do protótipopegar as informações do protótipo
+                <div>Aracruz</div>
+                <div>Presencial</div>
+                <div>40 horas</div>
+                <div>Início em 14/04/2025</div>
+
+                <Card.Text className={styles.bodyCard}>
+                  <div>
+                    Em até 1x de R$389,90
+                  </div>
+                  <div className={styles.endCard}>
+                    Valor total do curso r$ 389,00 em 01x s/Juros R$ 389,00
+                  </div>
+                </Card.Text>
               </Card.Text>
-              <Button variant="primary">Matricular-se</Button>
+              <Button variant="primary" className={styles.buton} style={{backgroundColor: '#3840BA'}}>Matricular-se</Button>
             </Card.Body>
           </Card>
         </div>

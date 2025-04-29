@@ -18,15 +18,10 @@ function BasicExample() {
                 <Navbar.Brand href="#home"><img src="./LogoSenai.svg" alt="LogoSenai" /></Navbar.Brand>
                 <NavDropdown color='#FFFFFF' title="=" id="basic-nav-dropdown">
                 
-                    <NavDropdown.Item href="#action/3.1">Colocar um link para a história do senai</NavDropdown.Item>
-                    <NavDropdown.Item href="#action/3.2">
-                        tela de login
-                    </NavDropdown.Item>
-                    <NavDropdown.Item href="#action/3.3">nem sei</NavDropdown.Item>
+                    <NavDropdown.Item href="#action/3.1">Nossa história!</NavDropdown.Item>
+                    <NavDropdown.Item href="#action/3.2">Logar</NavDropdown.Item>
+                    <NavDropdown.Item href="#action/3.3">Usuários</NavDropdown.Item>
                     <NavDropdown.Divider />
-                    <NavDropdown.Item href="#action/3.4">
-                        nem sei 2
-                    </NavDropdown.Item>
                 </NavDropdown>
 
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />

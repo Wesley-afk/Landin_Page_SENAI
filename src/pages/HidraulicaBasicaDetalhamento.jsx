@@ -1,7 +1,7 @@
 import React from 'react'
 import Footer from '../components/Footer';
 import Layout from '../components/Layout';
-import styles from './style/Construcao.module.css'
+import styles from './style/Hidraulica.module.css'
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 

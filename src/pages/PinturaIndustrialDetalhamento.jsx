@@ -2,7 +2,7 @@ import React from 'react'
 import Footer from '../components/Footer';
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
-import styles from './style/Construcao.module.css'
+import styles from './style/PinturaIndustrial.module.css'
 import Layout from '../components/Layout';
 
 const PinturaIndustrialDetalhamento = () => {

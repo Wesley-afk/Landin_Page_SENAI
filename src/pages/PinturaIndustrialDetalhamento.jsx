@@ -43,9 +43,7 @@ const PinturaIndustrialDetalhamento = () => {
 
       <div className={styles.card}>
         <Card className={styles.cardH}>
-          <Card.Img variant="top" src="pintura_industrial_1_18 1.svg" className={styles.Img} style={{
-            // usar o style pra ver se responde
-          }}/>
+          <Card.Img variant="top" src="pintura_industrial_1_18 1.svg"/>
           <Card.Body>
             <Card.Text>
               <div>Aracruz</div>

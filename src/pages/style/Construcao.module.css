@@ -1,12 +1,12 @@
 .hidraulica{
-    margin-top: 3%;
+    margin-top: 1.3%;
     background-image: url("/fundamentos_e_tecno_da_construcivil 1.svg");
     background-color: rgba(0, 0, 0, 0.3);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
     background-blend-mode: darken;
-    height: 40vh;
+    height: 42vh;
 }
 
 .hidraulica h2{

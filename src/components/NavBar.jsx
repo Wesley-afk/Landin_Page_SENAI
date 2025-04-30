@@ -52,10 +52,15 @@ function BasicExample() {
                                 }}>Pesquise o nome do curso <img src="lupa.svg" alt="Buscar" />
                                 </label>
                         </Nav.Link>
-                        <img src="/user.svg" alt="Icone do usuário" onClick={() => setMostrarLogin(!mostrarLogin)}/>
+                        <img src="/user.svg" alt="Icone do usuário" onClick={() => setMostrarLogin(!mostrarLogin)} style={{
+                            position:'relative',
+                            right:'6vw'
+                        }}/>
                         <p style={{
+                            position:'relative',
                             color:'white',
-                            marginTop:'2%'
+                            top:'5vh',
+                            right:'5.8vw'
                         }}>
                         Olá, faça login ou cadastre-se
                         </p>

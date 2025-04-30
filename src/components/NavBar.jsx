@@ -13,7 +13,7 @@ function BasicExample() {
 
     return (
     <>
-        <Navbar expand="lg" className="bg-body-primary"fixed='top' style={{ backgroundColor: '#22498D', display: 'flex', alignItems: 'center' }}>
+        <Navbar expand="lg" className="bg-body-primary"fixed='top' style={{ backgroundColor: '#22498D', display: 'flex', alignItems: 'center', height:'11vh'}}>
             <Container>
                 <Navbar.Brand href="#home"><img src="./LogoSenai.svg" alt="LogoSenai" /></Navbar.Brand>
                 <NavDropdown color='#FFFFFF' title="=" id="basic-nav-dropdown">
@@ -33,11 +33,24 @@ function BasicExample() {
                                 <input type="text"
                                     className="form-control"
                                     id="floatingInput"
-                                    placeholder="Elétrica"
+                                    style={{
+                                    position:'relative',
+                                    top:'3vh',
+                                    height:'4vh',
+                                    width:'50vw',
+                                    padding:'1%',
+                                    backgroundColor:'white',
+                                    
+                                    }}
                                 />
-                                <label htmlFor="floatingInput">Pesquise o nome do curso <img src="lupa.svg" alt="Buscar" />
+                                </div>
+                                <label htmlFor="floatingInput" 
+                                style={{
+                                    position:'relative',
+                                    bottom:'5vh',
+                                    left:'1vw'
+                                }}>Pesquise o nome do curso <img src="lupa.svg" alt="Buscar" />
                                 </label>
-                            </div>
                         </Nav.Link>
                         <img src="/user.svg" alt="Icone do usuário" onClick={() => setMostrarLogin(!mostrarLogin)}/>
                         <p style={{

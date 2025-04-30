@@ -41,7 +41,7 @@ function ControlledCarousel() {
           style={{
             width: '100%',
             position: 'absolute',
-            top: '12vh',
+            top: '11vh',
             left: 0,
           }}
         >

@@ -1,7 +1,7 @@
 import React from 'react'
 import Footer from '../components/Footer';
 import Layout from '../components/Layout';
-import styles from './style/hidraulica.module.css'
+import styles from './style/Construcao.module.css'
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 
@@ -46,6 +46,9 @@ const HidraulicaBasicaDetalhamento = () => {
 
         <div className={styles.card}>
           <Card className={styles.cardH}>
+            <div className={styles.sob}>
+              <p>ELETRÔNICA E AUTOMAÇÃO</p>
+            </div>
             <Card.Img variant="top" src="/hidraulica_4 1.svg" />
             <Card.Body>
               <Card.Text>
@@ -67,7 +70,7 @@ const HidraulicaBasicaDetalhamento = () => {
                   </div>
                 </Card.Text>
               </Card.Text>
-              <Button variant="primary" className={styles.buton} style={{backgroundColor: '#3840BA'}}>Matricular-se</Button>
+              <Button variant="primary" className={styles.buton} style={{ backgroundColor: '#3840BA' }}>Matricular-se</Button>
             </Card.Body>
           </Card>
         </div>

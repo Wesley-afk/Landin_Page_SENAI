@@ -1,5 +1,5 @@
 import React from 'react'
-import styles from './style/HistoriaSENAI.css'
+// import styles from './style/HistoriaSENAI.css'
 
 const HistoriaSENAI = () => {
   return (

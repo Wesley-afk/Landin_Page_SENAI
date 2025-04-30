@@ -7,8 +7,10 @@ import FloatingLabel from 'react-bootstrap/FloatingLabel';
 import Form from 'react-bootstrap/Form';
 import Login from './Login/Login';
 import styles from './Login/styles/login.module.css';
+import { useNavigate } from 'react-router-dom';
 
 function BasicExample() {
+    const navigate = useNavigate();
     const [mostrarLogin, setMostrarLogin] = useState(false);
 
     return (
@@ -18,7 +20,7 @@ function BasicExample() {
                 <Navbar.Brand href="#home"><img src="./LogoSenai.svg" alt="LogoSenai" /></Navbar.Brand>
                 <NavDropdown color='#FFFFFF' title="=" id="basic-nav-dropdown">
                 
-                    <NavDropdown.Item href="#action/3.1">Nossa história!</NavDropdown.Item>
+                    <NavDropdown.Item href="#action/3.1" onClick={() => navigate('/Historia')}>Nossa história!</NavDropdown.Item>
                     <NavDropdown.Item href="#action/3.2">Logar</NavDropdown.Item>
                     <NavDropdown.Item href="#action/3.3">Usuários</NavDropdown.Item>
                     <NavDropdown.Divider />

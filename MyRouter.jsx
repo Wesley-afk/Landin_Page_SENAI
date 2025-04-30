@@ -3,6 +3,7 @@ import Home from './src/pages/Home';
 import ConstrucaCivilDetalhamento from './src/pages/ConstrucaCivilDetalhamento'
 import HidraulicaBasicaDetalhamento from './src/pages/HidraulicaBasicaDetalhamento'
 import PinturaIndustrialDetalhamento from './src/pages/PinturaIndustrialDetalhamento'
+import HistoriaSENAI from "./src/pages/HistoriaSENAI";
 
 export const router = createBrowserRouter([
     {
@@ -20,6 +21,10 @@ export const router = createBrowserRouter([
             {
                 path: 'Pintura-industral',
                 element: <PinturaIndustrialDetalhamento/>
+            },
+            {
+                path: 'Historia',
+                element: <HistoriaSENAI/>
             }
         ]
     }

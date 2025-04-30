@@ -57,6 +57,9 @@ const ConstrucaCivilDetalhamento = () => {
 
         <div className={styles.card}>
           <Card className={styles.cardH}>
+           <div className={styles.sob}>
+             <p>ELETRÔNICA E AUTOMAÇÃO</p>
+           </div>
             <Card.Img variant="top" src="/fundamentos_e_tecno_da_construcivil 1.svg" />
             <Card.Body>
               <Card.Text>

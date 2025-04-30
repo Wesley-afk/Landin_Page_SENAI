@@ -50,6 +50,19 @@
     margin-bottom: 0.5%;
 }
 
+.sob{
+    position: absolute;
+    background-color: #F4BE37;
+    font-size:small;
+    color: #000000;
+}
+
+.sob p{
+    font-weight:500;
+    position: relative;
+    top: 1vh;
+}
+
 .endDet h4{
     font-size: 20px;
     margin-left: 4.5%;

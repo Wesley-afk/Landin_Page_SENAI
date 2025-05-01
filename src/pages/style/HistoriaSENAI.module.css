@@ -1,0 +1,16 @@
+.h3{
+    padding-left: 45%;
+    margin-bottom: 10vh;
+}
+
+.descricao{
+    margin-right: 60%;
+    margin-left: 1%;
+}
+
+.container{
+    margin-right: 60%;
+    position:relative;
+    left: 75%;
+    transform: translate(-50%, -49%);
+}

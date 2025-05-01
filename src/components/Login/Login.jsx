@@ -3,11 +3,29 @@ import Form from 'react-bootstrap/Form';
 import styles from './Styles/login.module.css'
 import Cadastro from '../Cadastro/Cadastro';
 import { useState } from 'react';
+import { error } from 'console';
 
 function Login() {
   const [mostrarCadastro, setMostrarCadastro] = useState(false);
   //Declarando as variáveis para aprender a validar os campos
-  const [Email, setEmail] = useState(""); //Por que tá vazio?
+  const [Email, setEmail] = useState("");
+  const [Senha, setSenha] = useState("");
+  const [Error, setError] = useState("");
+
+  //Criando a função para validar
+  const handleSubmit = (e) =>{
+      e.preventDefault(); //Garante que não vai recarregar toda a página, apenas os meus componentes
+
+      if(!Email || !Senha){
+          setError("Preencha todos os campos para proseeguir");
+          return;
+      }
+
+      //Limpar o buffer para caso apareça mais algum erro
+      error("");
+      alert("Autenticado com sucesso");
+
+  }
 
   return (
   <>

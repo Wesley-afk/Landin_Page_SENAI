@@ -6,6 +6,8 @@ import { useState } from 'react';
 
 function Login() {
   const [mostrarCadastro, setMostrarCadastro] = useState(false);
+  //Declarando as variáveis para aprender a validar os campos
+  const [Email, setEmail] = useState(""); //Por que tá vazio?
 
   return (
   <>

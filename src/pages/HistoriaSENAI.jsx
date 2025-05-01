@@ -10,8 +10,7 @@ const HistoriaSENAI = () => {
     <div>
       <Layout />
       <section>
-        <video src="/SENAIVIDEO - Trim.wmv" controls className={styles.video}>
-        
+        <video src="/SENAIVIDEO.wmv" controls className={styles.video}>
         </video>
       </section>
 

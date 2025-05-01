@@ -3,7 +3,6 @@ import Form from 'react-bootstrap/Form';
 import styles from './Styles/login.module.css'
 import Cadastro from '../Cadastro/Cadastro';
 import { useState } from 'react';
-import { error } from 'console';
 
 function Login() {
   const [mostrarCadastro, setMostrarCadastro] = useState(false);
@@ -22,30 +21,33 @@ function Login() {
       }
 
       //Limpar o buffer para caso apareça mais algum erro
-      error("");
+      setError("");
       alert("Autenticado com sucesso");
 
   }
 
   return (
   <>
+   {Error && <p className={styles.error}>{Error}</p>}
     <Form>
     <div className={styles.email}>
       <Form.Group className="mb-3" controlId="formBasicEmail">
         <Form.Label><p>Endereço de e-mail</p></Form.Label>
-        <Form.Control type="email" placeholder="Inserir e-mail" />
+        <Form.Control type="email" placeholder="Inserir e-mail" onChange={(e) => setEmail(e.target.value)} />
         <Form.Text className="text-muted">
         </Form.Text>
       </Form.Group>
 
       <Form.Group className="mb-3" controlId="formBasicPassword">
         <Form.Label><p>Senha</p></Form.Label>
-        <Form.Control type="password" placeholder="Inserir senha" />
+        <Form.Control type="password" placeholder="Inserir senha" onChange={(e) => setSenha(e.target.value)}/>
       </Form.Group>
+
       <Form.Group className="mb-3" controlId="formBasicCheckbox">
         <Form.Check type="checkbox" label="Guardar senha" className={styles.label}/>
       </Form.Group>
-      <Button variant="primary" type="submit" style={{marginRight:'14%'}}>
+
+      <Button variant="primary" type="submit" style={{marginRight:'14%'}} onClick={handleSubmit}>
         Enviar
       </Button>
       <Button style={{ backgroundColor: '#02D80C', borderColor: '#02D80C'}}

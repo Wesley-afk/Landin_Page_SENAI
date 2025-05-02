@@ -5,39 +5,58 @@ import { useState } from 'react';
 function Cadastro() {
   const [email, setEmail] = useState('');
   const [senha, setSenha] = useState('');
+  const [nome, setNome] = useState('');
+  const [idade, setIdade] = useState('');
   const [error, setError] = useState('');
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    console.log("Formulário foi enviado");
 
-    if (!email || !senha) {
+    if (!email || !senha || !nome || !idade) {
       setError('Preencha todos os campos!');
       return;
     }
-    
+
+    // Convertendo idade corretamente para número
+    const idadeFormatada = parseInt(idade);
+    if (isNaN(idadeFormatada)) {
+      setError('Idade precisa ser um número válido!');
+      return;
+    }
+
     setError('');
 
-    console.log("Tentando enviar:", { email, senha });
-
     try {
-      const response = await fetch('http://localhost:5000/users', {
+      const respostaUsuario = await fetch("http://localhost:3002/usuarios", {
         method: 'POST',
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({ email, senha }),
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email, nome, idade: idadeFormatada, senha })
       });
 
-      console.log("Código de resposta:", response.status);
-
-      if (response.ok) {
-        alert('Cadastro realizado com sucesso!');
-      } else {
-        alert(`Erro ao cadastrar! Código: ${response.status}`);
+      if (!respostaUsuario.ok) {
+        throw new Error(`Erro na API: ${respostaUsuario.status}`);
       }
+
+      const novoUsuario = await respostaUsuario.json();
+
+      alert("Usuário cadastrado com sucesso!");
+
+      const respostaLogin = await fetch("http://localhost:3002/logins", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email, senha })
+      });
+
+      if (!respostaLogin.ok) {
+        throw new Error(`Erro ao registrar login: ${respostaLogin.status}`);
+      }
+
+      console.log("Usuário cadastrado:", novoUsuario);
+
     } catch (error) {
       console.error("Erro ao cadastrar:", error);
-      alert("Erro ao conectar com o servidor.");
+      alert(`Erro ao cadastrar usuário: ${error.message}`);
     }
   };
 
@@ -46,8 +65,7 @@ function Cadastro() {
       <Form.Group className="mb-3" controlId="formBasicEmail">
         <Form.Label>Endereço de e-mail</Form.Label>
         <Form.Control 
-          type="email" 
-          placeholder="Enter email" 
+          placeholder="Digite seu e-mail" 
           value={email}
           onChange={(e) => setEmail(e.target.value)}
         />
@@ -56,21 +74,37 @@ function Cadastro() {
         </Form.Text>
       </Form.Group>
 
+      <Form.Group className="mb-3" controlId="formBasicName">
+        <Form.Label>Nome</Form.Label>
+        <Form.Control 
+          type="text" 
+          placeholder="Digite seu nome" 
+          value={nome}
+          onChange={(e) => setNome(e.target.value)}
+        />
+      </Form.Group>
+
+      <Form.Group className="mb-3" controlId="formBasicAge">
+        <Form.Label>Idade</Form.Label>
+        <Form.Control 
+          type="number" 
+          placeholder="Digite sua idade" 
+          value={idade}
+          onChange={(e) => setIdade(e.target.value)}
+        />
+      </Form.Group>
+
       <Form.Group className="mb-3" controlId="formBasicPassword">
         <Form.Label>Senha</Form.Label>
         <Form.Control 
           type="password" 
-          placeholder="Password" 
+          placeholder="Digite sua senha" 
           value={senha}
           onChange={(e) => setSenha(e.target.value)}
         />
       </Form.Group>
 
-      <Form.Group className="mb-3" controlId="formBasicCheckbox">
-        <Form.Check type="checkbox" label="Check me out" />
-      </Form.Group>
-
-      <Button variant="primary" type="submit">
+      <Button variant="primary" type="submit" onClick={handleSubmit}>
         Enviar
       </Button>
     </Form>

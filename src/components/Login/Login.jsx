@@ -11,9 +11,30 @@ function Login() {
   const [Senha, setSenha] = useState("");
   const [Error, setError] = useState("");
 
+  const verificarLogin = async(email, senha) => {
+    try{
+      const resposta = await fetch(`http://localhost:3002/logins?email=${email}&senha=${senha}`);
+      const dados = await resposta.json();
+
+      if(dados.length > 0){
+        console.log("Login encontrado");
+        alert("Autenticado com sucesso");
+        return true;
+      } else{
+        console.log("Usuário ou senha inválidos");
+        alert("Usuário ou senha incorretos");
+        return false;
+      }
+    }catch(error){
+      console.error("Erro ao verificar login:", {error});
+      return false;
+    }
+  }
+  
   //Criando a função para validar
   const handleSubmit = (e) =>{
       e.preventDefault(); //Garante que não vai recarregar toda a página, apenas os meus componentes
+      // verificarLogin(Email, Senha);
 
       if(!Email || !Senha){
           setError("Preencha todos os campos para proseeguir");
@@ -22,8 +43,13 @@ function Login() {
 
       //Limpar o buffer para caso apareça mais algum erro
       setError("");
-      alert("Autenticado com sucesso");
+      const loginValido = verificarLogin(Email, Senha);
 
+      if(loginValido){
+        console.log("Usuário autenticado com sucesso")
+      }
+      
+  // Mandar o botão chamar o handle submit ou o verificar login
   }
 
   return (

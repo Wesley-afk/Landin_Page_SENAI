@@ -60,21 +60,18 @@ function Cadastro({ setMostrarCadastro }) {
   };
 
   return (
-    <Form onSubmit={handleSubmit}>
+    <Form onSubmit={handleSubmit} style={{padding:'4%', position:'relative'}}>
       <Form.Group className="mb-3" controlId="formBasicEmail">
-        <Form.Label>Endereço de e-mail</Form.Label>
+        <Form.Label style={{color:'white'}}>Endereço de e-mail</Form.Label>
         <Form.Control 
           placeholder="Digite seu e-mail" 
           value={email}
           onChange={(e) => setEmail(e.target.value)}
         />
-        <Form.Text className="text-muted">
-          Nunca compartilharemos seu e-mail com mais ninguém.
-        </Form.Text>
       </Form.Group>
 
       <Form.Group className="mb-3" controlId="formBasicName">
-        <Form.Label>Nome</Form.Label>
+        <Form.Label style={{color:'white'}}>Nome</Form.Label>
         <Form.Control 
           type="text" 
           placeholder="Digite seu nome" 
@@ -84,7 +81,7 @@ function Cadastro({ setMostrarCadastro }) {
       </Form.Group>
 
       <Form.Group className="mb-3" controlId="formBasicAge">
-        <Form.Label>Idade</Form.Label>
+        <Form.Label style={{color:'white'}}>Idade</Form.Label>
         <Form.Control 
           type="number" 
           placeholder="Digite sua idade" 
@@ -94,7 +91,7 @@ function Cadastro({ setMostrarCadastro }) {
       </Form.Group>
 
       <Form.Group className="mb-3" controlId="formBasicPassword">
-        <Form.Label>Senha</Form.Label>
+        <Form.Label style={{color:'white'}}>Senha</Form.Label>
         <Form.Control 
           type="password" 
           placeholder="Digite sua senha" 
@@ -103,11 +100,11 @@ function Cadastro({ setMostrarCadastro }) {
         />
       </Form.Group>
 
-      <Button variant="primary" type="submit" onClick={handleSubmit} style={{position:"relative", left:"25%"}}>
+      <Button variant="primary" type="submit" onClick={handleSubmit} style={{position:"relative", left:"8%"}}>
         Enviar
       </Button>
 
-      <Button variant="secondary" onClick={() => setMostrarCadastro(false)} style={{ backgroundColor: '#02D80C', borderColor: '#02D80C', position:'relative', left:'35%'}}
+      <Button variant="secondary" onClick={() => setMostrarCadastro(false)} style={{ backgroundColor: '#02D80C', borderColor: '#02D80C', position:'relative', left:'15%'}}
               onMouseEnter={e => e.target.style.backgroundColor = '#019A09'}
               onMouseLeave={e => e.target.style.backgroundColor = '#02D80C'}>
         Voltar

@@ -7,6 +7,7 @@ import FloatingLabel from 'react-bootstrap/FloatingLabel';
 import Form from 'react-bootstrap/Form';
 import Login from './Login/Login';
 import styles from './Login/styles/login.module.css';
+import stales from './src/components/Nav.module.css'
 import { useNavigate } from 'react-router-dom';
 
 function BasicExample() {
@@ -19,11 +20,13 @@ function BasicExample() {
             <Container>
                 <Navbar.Brand href="#home"><img src="./LogoSenai.svg" alt="LogoSenai" /></Navbar.Brand>
                 <NavDropdown color='#FFFFFF' title="=" id="basic-nav-dropdown">
-                
+                <div style={{
+                    //   Se der tempo fazer igual ao da loj,senai
+                }}>
                     <NavDropdown.Item href="#action/3.1" onClick={() => navigate('/Historia')}>Nossa história!</NavDropdown.Item>
-                    <NavDropdown.Item href="#action/3.2">Logar</NavDropdown.Item>
-                    <NavDropdown.Item href="#action/3.3">Usuários</NavDropdown.Item>
+                    <NavDropdown.Item href='#action/3.2'></NavDropdown.Item>
                     <NavDropdown.Divider />
+                </div>
                 </NavDropdown>
 
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
@@ -66,6 +69,17 @@ function BasicExample() {
                         }}>
                         Olá, faça login ou cadastre-se
                         </p>
+
+                        <Nav.Link href="#home">
+                        <label htmlFor="floatingInput">
+                                <img src="/FavoritarCurso.svg" style={{
+                                    paddingTop:'5vh',
+                                    position: 'relative',
+                                    right:'2.9vw'
+
+                                }}/>
+                        </label>
+                        </Nav.Link>
                     </Nav>
                     {mostrarLogin && <div className={styles.LayOutLogin}><Login/></div>}
                 </Navbar.Collapse>

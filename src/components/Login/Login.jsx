@@ -11,14 +11,37 @@ function Login() {
   const [Senha, setSenha] = useState("");
   const [Error, setError] = useState("");
 
-  const verificarLogin = async(email, senha) => {
-    try{
+  const verificarLogin = async (email, senha) => {
+    try {
+      // Faz uma requisição GET para o servidor simulando um login com email e senha
       const resposta = await fetch(`http://localhost:3002/logins?email=${email}&senha=${senha}`);
+  
+      // Converte a resposta da requisição para um objeto JSON
       const dados = await resposta.json();
+  
+      // Verifica se o servidor retornou algum dado (ou seja, se encontrou algum login com esse email e senha)
+      if (dados.length > 0) {
+        console.log("Login encontrado"); // Log para desenvolvedor no console
+        alert("Autenticado com sucesso"); // Mensagem para o usuário
+  
+        // Armazena o e-mail do usuário encontrado
+        const emailDoUsuario = dados[0].email;
+  
+        // Agora busca as informações completas do usuário com base no e-mail
+        const respostaUsuario = await fetch(`http://localhost:3002/usuarios?email=${emailDoUsuario}`);
+  
+        // Converte a nova resposta para JSON
+        const usuarios = await respostaUsuario.json();
+  
+        // Pega o primeiro (e possivelmente único) usuário retornado
+        const usuario = usuarios[0];
+  
+        // Se encontrou o usuário, mostra uma mensagem de boas-vindas com o nome
+        if (usuario) {
+          console.log("Nome identificado do usuário foi:" + usuario.nome); // Log no console
+          alert(`Bem-Vindo, ${usuario.nome}!`); // Saudação personalizada ao usuário
+        }
 
-      if(dados.length > 0){
-        console.log("Login encontrado");
-        alert("Autenticado com sucesso");
         return true;
       } else{
         console.log("Usuário ou senha inválidos");
@@ -84,7 +107,8 @@ function Login() {
         Cadastrar
       </Button>
     </div>
-    {mostrarCadastro && <> <Cadastro/> </>}
+    {mostrarCadastro && <Cadastro setMostrarCadastro={setMostrarCadastro} />}
+
     </Form>
   </>
   );

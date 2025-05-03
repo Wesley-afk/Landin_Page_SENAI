@@ -18,7 +18,6 @@ function Cadastro() {
       return;
     }
 
-    // Convertendo idade corretamente para número
     const idadeFormatada = parseInt(idade);
     if (isNaN(idadeFormatada)) {
       setError('Idade precisa ser um número válido!');

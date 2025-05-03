@@ -77,6 +77,10 @@ function Login() {
 
   return (
   <>
+    {mostrarCadastro ? (
+      <Cadastro setMostrarCadastro={setMostrarCadastro}/>
+    ) : (
+      <>
    {Error && <p className={styles.error}>{Error}</p>}
     <Form>
     <div className={styles.email}>
@@ -107,9 +111,9 @@ function Login() {
         Cadastrar
       </Button>
     </div>
-    {mostrarCadastro && <Cadastro setMostrarCadastro={setMostrarCadastro} />}
-
     </Form>
+    </>
+    )}
   </>
   );
 }

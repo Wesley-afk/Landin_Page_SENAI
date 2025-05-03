@@ -103,8 +103,14 @@ function Cadastro() {
         />
       </Form.Group>
 
-      <Button variant="primary" type="submit" onClick={handleSubmit}>
+      <Button variant="primary" type="submit" onClick={handleSubmit} style={{position:"relative", left:"25%"}}>
         Enviar
+      </Button>
+
+      <Button variant="secondary" onClick={() => setMostrarCadastro(false)} style={{ backgroundColor: '#02D80C', borderColor: '#02D80C', position:'relative', left:'35%'}}
+              onMouseEnter={e => e.target.style.backgroundColor = '#019A09'}
+              onMouseLeave={e => e.target.style.backgroundColor = '#02D80C'}>
+        Voltar
       </Button>
     </Form>
   );

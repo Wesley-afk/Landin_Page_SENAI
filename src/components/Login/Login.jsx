@@ -14,7 +14,7 @@ function Login() {
   const verificarLogin = async (email, senha) => {
     try {
       // Faz uma requisição GET para o servidor simulando um login com email e senha
-      const resposta = await fetch(`http://localhost:3002/logins?email=${email}&senha=${senha}`);
+      const resposta = await fetch(`http://localhost:3000/logins?email=${email}&senha=${senha}`);
   
       // Converte a resposta da requisição para um objeto JSON
       const dados = await resposta.json();
@@ -28,7 +28,7 @@ function Login() {
         const emailDoUsuario = dados[0].email;
   
         // Agora busca as informações completas do usuário com base no e-mail
-        const respostaUsuario = await fetch(`http://localhost:3002/usuarios?email=${emailDoUsuario}`);
+        const respostaUsuario = await fetch(`http://localhost:3000/usuarios?email=${emailDoUsuario}`);
   
         // Converte a nova resposta para JSON
         const usuarios = await respostaUsuario.json();

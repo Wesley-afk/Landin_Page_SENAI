@@ -27,7 +27,7 @@ function Cadastro({ setMostrarCadastro }) {
     setError('');
 
     try {
-      const respostaUsuario = await fetch("http://localhost:3002/usuarios", {
+      const respostaUsuario = await fetch("http://localhost:3000/usuarios", {
         method: 'POST',
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ email, nome, idade: idadeFormatada, senha })
@@ -41,7 +41,7 @@ function Cadastro({ setMostrarCadastro }) {
 
       alert("Usuário cadastrado com sucesso!");
 
-      const respostaLogin = await fetch("http://localhost:3002/logins", {
+      const respostaLogin = await fetch("http://localhost:3000/logins", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ email, senha })

@@ -29,7 +29,7 @@ function ControlledCarousel() {
           justifyContent: 'center',
           alignItems: 'center',
           width: '100%',
-          height: '94vh',
+          height: 'auto',
           margin: '0',
           padding: '0',
           overflow: 'hidden',
@@ -40,9 +40,7 @@ function ControlledCarousel() {
           onSelect={handleSelect}
           style={{
             width: '100%',
-            position: 'absolute',
-            top: '11vh',
-            left: 0,
+            marginTop:'2vh',
           }}
         >
           <Carousel.Item style={{ height: '100%' }}>
@@ -51,10 +49,8 @@ function ControlledCarousel() {
               src="/imgSenai.svg"
               alt="Chegue rápido no mercado de trabalho"
               style={{
-                objectFit: 'cover',
                 width: '100%',
-                height: '100%',
-                display: 'block',
+                height: 'auto',
               }}
             />
           </Carousel.Item>
@@ -63,11 +59,9 @@ function ControlledCarousel() {
               className="d-block w-100"
               src="/imgSenai.svg"
               alt="Second slide"
-              style={{
-                objectFit: 'cover',
+              style={{ 
                 width: '100%',
-                height: '100%',
-                display: 'block',
+                height: 'auto',
               }}
             />
           </Carousel.Item>
@@ -76,25 +70,22 @@ function ControlledCarousel() {
               className="d-block w-100"
               src="/imgSenai.svg"
               alt="Third slide"
-              style={{
-                objectFit: 'cover',
+              style={{ 
                 width: '100%',
-                height: '100%',
-                display: 'block',
+                height: 'auto',
               }}
             />
           </Carousel.Item>
         </Carousel>
       </div>
 
-      {/* Título da sessão */}
       <div
         style={{
           position: 'relative',
           display: 'flex',
           alignItems: 'center',
           gap: '10px',
-          marginTop: '-98px',
+          marginTop: '2rem',
           padding: '20px',
         }}
       >

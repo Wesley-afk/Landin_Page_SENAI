@@ -9,10 +9,12 @@ import Login from './Login/Login';
 import styles from './Login/styles/login.module.css';
 import stales from './src/components/Nav.module.css'
 import { useNavigate } from 'react-router-dom';
+import Home from "../pages/Home"
 
 function BasicExample() {
     const navigate = useNavigate();
     const [mostrarLogin, setMostrarLogin] = useState(false);
+    const [home, setHome] = useState(false);
 
     return (
         <>
@@ -30,7 +32,7 @@ function BasicExample() {
                       {/* <Navbar.Toggle aria-controls="basic-navbar-nav" /> */}
                       {/* <Navbar.Collapse id="basic-navbar-nav"> */}
                         {/* imagem da logo do senai */}
-                        <Navbar.Brand href="#home" style={{padding: '0', maxWidth: '150px', width: '100%'}}>
+                        <Navbar.Brand href="#home" style={{padding: '0', maxWidth: '150px', width: '100%'}} onClick={() => setHome(!home)}>
                             <img
                                 src="./LogoSenai.svg"
                                 alt="LogoSenai" 
@@ -38,8 +40,8 @@ function BasicExample() {
                                          width: '100%',
                                          height: 'auto',
                                          display: 'block',
-                                }}
-                                onClick={(e) => navigate(setHome())}
+                                         cursor: 'pointer'
+                                }}     
                             />
                         </Navbar.Brand>
 
@@ -119,6 +121,7 @@ function BasicExample() {
                                 </label>
                             </Nav.Link>
                         </Nav>
+                        {home && <Home/>}
                         {mostrarLogin && <div className={styles.LayOutLogin}><Login /></div>}
                         {/* </Navbar.Collapse> */}
                 </Container>

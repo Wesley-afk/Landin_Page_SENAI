@@ -1,28 +1,20 @@
-/* .NavBar{
-    display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    grid-template-rows: auto;
-    background-color: #22498D;
-    width: 100%;
-    padding: 1%;
-    border: 0;
-    margin: 0;
-    align-items: center;
+@media (max-width: 600px){
+
+    .IconeUsuario{
+       width: 40px !important;
+       margin-top: -2%;
+       margin-left: 93%;
+       height: auto !important;
+    }
+
+    .areaBranca{
+        display: none;
+    }
+
+    .pIconeUsuario{
+        margin-left: 93%;
+        color: black !important;
+        background-color: aliceblue;
+    }
+
 }
-
-.nav{
-   
-    
-}
-
-.pesquisar{
-    display: flex;
-    background-color: #FFFFFF;
-    width: 763px;
-    height: 46px;
-} */
-
-/* Parte da navbar */
-/* .bg-body-primary{
-    
-} */

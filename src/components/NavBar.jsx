@@ -6,6 +6,7 @@ import NavDropdown from 'react-bootstrap/NavDropdown';
 import Login from './Login/Login';
 import Home from '../pages/Home';
 import styles from './Login/styles/login.module.css';
+import stales from '../components/Nav.module.css';
 import { useNavigate } from 'react-router-dom';
 
 function BasicExample() {
@@ -17,11 +18,11 @@ function BasicExample() {
             <Navbar expand="lg" className="bg-body-primary" fixed='top' style={{ backgroundColor: '#0746B4', display: 'flex', alignItems: 'center', height: '11vh' }}>
                 <Container>
                     <Navbar.Brand href="#home">
-                        <img src="./LogoSenai.svg" alt="LogoSenai" 
-                        onClick={() => navigate('/')}
+                        <img src="./LogoSenai.svg" alt="LogoSenai"
+                            onClick={() => navigate('/')}
                         />
                     </Navbar.Brand>
-                    <NavDropdown color='#FFFFFF' title="Menu" id="basic-nav-dropdown" 
+                    <NavDropdown color='#FFFFFF' title="Menu" id="basic-nav-dropdown"
                         style={{
                             color: '#FFFFFF',
                             fontSize: '15px',
@@ -35,34 +36,39 @@ function BasicExample() {
                         </div>
                     </NavDropdown>
 
+                    {/* Estilizando para telas pequenas */}
+                    {/* <div className={styles.Estilizacao}> */}
                     <Navbar.Toggle aria-controls="basic-navbar-nav" />
                     <Navbar.Collapse id="basic-navbar-nav">
                         <Nav className="me-auto">
                             <Nav.Link href="#home">
 
-                                <div className="form-floating mb-3" style={{ width: 900, display: 'flex', alignItems: 'center' }}>
-                                    <input type="text"
-                                        className="form-control"
-                                        id="floatingInput"
+                                <section className={stales.areaBranca}>
+                                    <div className="form-floating mb-3" style={{ width: 900, display: 'flex', alignItems: 'center' }}>
+                                        <input type="text"
+                                            className="form-control"
+                                            id="floatingInput"
+                                            style={{
+                                                position: 'relative',
+                                                top: '3vh',
+                                                height: '4vh',
+                                                width: '50vw',
+                                                padding: '1%',
+                                                backgroundColor: 'white',
+                                            }}
+                                        />
+                                    </div>
+                                    <label htmlFor="floatingInput"
                                         style={{
                                             position: 'relative',
-                                            top: '3vh',
-                                            height: '4vh',
-                                            width: '50vw',
-                                            padding: '1%',
-                                            backgroundColor: 'white',
+                                            bottom: '5vh',
+                                            left: '1vw'
                                         }}
-                                    />
-                                </div>
-                                <label htmlFor="floatingInput"
-                                    style={{
-                                        position: 'relative',
-                                        bottom: '5vh',
-                                        left: '1vw'
-                                    }}>Pesquise o nome do curso <img src="lupa.svg" alt="Buscar" />
-                                </label>
+                                    >Pesquise o nome do curso <img src="lupa.svg" alt="Buscar" />
+                                    </label>
+                                </section>
                             </Nav.Link>
-                            <img src="/user.svg" alt="Icone do usuário" onClick={() => setMostrarLogin(!mostrarLogin)} style={{
+                            <img className={stales.IconeUsuario} src="/user.svg" alt="Icone do usuário" onClick={() => setMostrarLogin(!mostrarLogin)} style={{
                                 position: 'relative',
                                 right: '6vw'
                             }} />
@@ -72,7 +78,9 @@ function BasicExample() {
                                 top: '5vh',
                                 right: '5.8vw',
                                 width: '9vw',
-                            }}>
+                            }}
+                            className={stales.pIconeUsuario}
+                            >
                                 Olá, faça login ou cadastre-se
                             </p>
 
